@@ -1,0 +1,691 @@
+@import url('./iransans-fonts.css');
+
+:root {
+    --text-xs : 0.725rem;
+    --text-sm : 0.875rem;
+    --text-md : 1.125rem;
+    --text-base : 1rem;
+    --text-lg : 1.25rem;
+    --text-xl : 1.375rem;
+    --text-2xl : 1.5rem;
+    --text-3xl : 2.25rem;
+    --background-primary : #f2f5f8;
+}
+
+
+html {
+    font-size: 100%;
+    font-family: IRANSansX;
+    color: #333;
+    line-height: 1.7;
+}
+
+p {
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit !important;
+}
+
+/* Base container styling */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    /* padding-right: 12%;
+    padding-left: 12%; */
+}
+
+/* Shared Styles */
+.button {
+    border: none;
+    padding:1rem 2rem;
+    outline: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.button-green {
+    background-color: rgb(0, 209, 112);
+    color: white;
+}
+
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Extra extra large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1440px; /* Increased width for larger screens */
+    }
+}
+
+
+.navbar {
+    height: 5.5rem;
+    display: flex;
+    background-color: white;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    position: fixed;
+    width: 100%;
+    z-index: 1200;
+    top: 0;
+}
+
+.navbar__section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar__links {
+    display: flex;
+}
+
+.navbar__links .navbar__links_has_dropdown {
+    display: flex;
+}
+
+.navbar__links .navbar__links_has_dropdown span {
+    padding-left: .5rem;
+}
+
+.navbar__links .dropdown_menu_icon {
+    transform: rotate(90deg);
+    width: 1rem;
+    height: 1rem;
+    color: rgba(0,0,0,.6);
+}
+
+.navbar__links > li {
+    position: relative;
+    margin-right: 2.2rem;
+    font-weight: 200;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.navbar__links > li > a {
+    text-decoration: none;
+    color : #333;
+}
+
+.navbar__links .navbar__links_menu > li > a {
+    text-decoration: none;
+    color : #333;
+}
+
+
+.navbar__links > li a:hover {
+    color: #00d170;
+    font-weight: 500;
+}
+
+.navbar__links > li:hover .navbar__links_menu {
+    display: block;
+}
+
+.navbar__links .navbar__links_menu {
+    z-index: 50;
+    position: absolute;
+    background: white;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 1rem 0;
+    border-radius: 0.75rem;
+    top : 3rem;
+    right: -2rem;
+    display: none;
+}
+
+.navbar__links .navbar__links_menu > li{
+    padding: 0.75rem 1.5rem ;
+    white-space: nowrap;
+    font-weight: 300;
+}
+
+
+
+/*
+* Hero Section
+*/
+
+.hero-section {
+    display: flex;
+    margin-top: 5.5rem;
+}
+
+.hero-section__intro {
+    background-color: #21aa58;
+    color: white;
+    width: 100%;
+    padding: 1rem 1rem 1.5rem;
+}
+
+.hero-section__intro_tagline {
+    font-size: var(--text-2xl);
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section__intro_description {
+    font-size: var(--text-base);
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+
+.hero-section__intro_sendlink {
+    align-items: center;
+    height: 3.5rem ;
+    margin-bottom: 1rem;
+    display: none;
+}
+
+.hero-section__intro_sendlink > button {
+    border: none;
+    border-radius: 0.375rem;
+    color : #21aa58;
+    font-family: inherit !important;
+    padding: 0 1rem;
+    flex: 0 0 24%;
+    height: 2.5rem;
+    margin-right: 1rem;
+}
+
+.hero-section__intro_sendlink_input {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    flex : 0 0 50%;
+}
+
+.hero-section__intro_sendlink_input input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    line-height: 3rem;
+    padding: 0 .5rem;
+    height: 2.5rem;
+    width: 100%;
+}
+
+.hero-section__intro_sendlink_input input::placeholder {
+    color: white;
+}
+
+.hero-section__intro_sendlink_input .input__dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 99999999px;
+    background-color: white;
+    margin-left: .5rem;
+}
+
+.hero-section__pic {
+    background-image: url(/statics/img/intro_desktop.jpg);
+    min-height: 40vh;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    transform: scaleX(-1);
+    flex: 0 0 50%;
+    display: none;
+}
+
+.hero-section__intro_gotowebapp {
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    font-size : var(--text-md);
+    cursor: pointer;
+    border-radius: .325rem;
+    height: 3rem;
+    padding: 0 1.5rem;
+    display: none;
+}
+
+
+.hero-section__intro_gotowebapp:hover {
+    background-color: rgba(255,255,255, .1);
+}
+
+.hero-section__downloadapp {
+    border: none;
+    width: 100%;
+    background-color: white;
+    font-size : var(--text-base);
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: .325rem;
+    height: 3rem;
+    padding: 0 1.5rem;
+}
+
+
+@media (min-width: 992px) {
+    .hero-section__intro {
+        width: 50%;
+        padding: 2rem;
+        padding-right: 15%;
+    }
+
+    .hero-section__intro_tagline {
+        font-size: var(--text-3xl);
+    }
+
+    .hero-section__intro_description {
+        font-size: var(--text-lg);
+    }
+
+    .hero-section__pic {
+        display: block;
+    }
+
+    .hero-section__intro_sendlink {
+        display: flex;
+    }
+
+    .hero-section__intro_gotowebapp {
+        display: block;
+    }
+
+    .hero-section__downloadapp {
+        display: none;
+    }
+}
+
+/**
+*  Snapp Apps Links
+*/
+
+.snapp-apps-links-section {
+    display: none;
+}
+
+.snapp-apps-links {
+    min-height: 30vh;
+    content-visibility: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2rem;
+}
+
+@media (min-width: 992px) {
+    .snapp-apps-links-section {
+        display: block;
+    }
+}
+
+/**
+*  Intro Of Snapp Apps
+*/
+
+.intro-of-snapp-apps {
+    background-color: var(--background-primary);
+    color: #333;
+    padding-bottom: 3rem;
+}
+
+.intro-of-snapp-apps_items {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 1rem;
+    margin: 1rem 0.5rem;
+}
+
+
+.intro-of-snapp-apps_items > a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.intro-of-snapp-apps_title {
+    padding: 2.5rem 0;
+    font-size: var(--text-md);
+    font-weight: 700;
+    line-height: 3.25rem;
+    text-align: center;
+}
+
+.intro-of-snapp-apps_item {
+    background-color: white;
+    border-radius: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.intro-of-snapp-apps_item_info {
+    margin-right: 0.5rem;
+    padding: 1.125rem 0;
+}
+
+.intro-of-snapp-apps_item_info h3 {
+    margin-bottom: .5rem;
+    font-weight: bold;
+    text-align: center;
+    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+.intro-of-snapp-apps_item_info p {
+    font-size: var(--text-sm);
+    color: rgba(0,0,0,.6);
+    display: none;
+}
+
+
+.snapp-for-all-need {
+    display: flex;
+    position: relative;
+    min-height: 700px;
+}
+
+
+.snapp-for-all-need__pic {
+    background-image: url(/statics/img/super-app.jpg);
+    height: 50vh;
+    width: 50%;
+    background-position: center center;
+    background-size: cover;
+    flex: 0 0 50%;
+}
+
+
+
+.snapp-for-all-need__intro {
+    width: 50%;
+    padding: 2rem;
+    padding-left: 15%;
+    color : #333;
+}
+
+
+.snapp-for-all-need__intro h2 {
+    font-size: var(--text-xl);
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.snapp-for-all-need__intro p {
+    font-weight: 300;
+    font-size: var(--text-sm);
+}
+
+.snapp-benefits {
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+    left: 0;
+}
+
+
+.snapp-benefits__items {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 4rem;
+    padding: 0 17rem;
+}
+
+.snapp-benefits__item_cover {
+    background-color: var(--background-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.125rem;
+}
+
+.snapp-benefits__item_title {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.snapp-benefits__item_description {
+    font-size: var(--text-xs);
+    font-weight: 300;
+}
+
+
+@media (min-width : 992px) {
+    .intro-of-snapp-apps_title {
+        font-size: var(--text-3xl);
+    }
+
+    .intro-of-snapp-apps_items {
+        grid-template-columns: repeat(auto-fill , 20rem);
+        gap: 2rem;
+        justify-content: center;
+        /* padding: 2rem 7rem; */
+    }
+
+    .intro-of-snapp-apps_item {
+        flex-direction: row;
+    }
+
+    .intro-of-snapp-apps_item_info h3 {
+        text-align: right;
+        font-size: var(--text-base);
+        line-height: 1.5;
+    }
+
+    .intro-of-snapp-apps_item_info p {
+        display: block;
+    }
+
+
+}
+
+/**
+* Driver Registration
+*/
+
+
+.driver-registration {
+    background-color: var(--background-primary);
+    padding:4rem;
+}
+
+.driver-registration__title {
+    font-size: var(--text-3xl);
+    font-weight: bold;
+    text-align: center;
+}
+
+.driver-registration__description {
+    padding: 1rem 0;
+    text-align: center;
+    display: block;
+    font-size: var(--text-lg) ;
+    font-weight: 300;
+}
+
+
+
+.driver-registration__btn {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.driver-registration__video {
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 2.5rem;
+}
+
+.driver-registration__video video {
+    width: 100%;
+    height: 100%;
+
+}
+
+.driver-registration__benefits {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 2rem;
+    margin: 2.5rem;
+}
+
+.driver-registration__benefits_item {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.driver-registration__benefits_item .benefits_item_info h4 {
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.driver-registration__benefits_item .benefits_item_info p {
+    font-size: var(--text-sm);
+}
+
+
+/**
+* Footer
+*/
+
+.footer {
+    padding: 3rem 0;
+}
+
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer__links li {
+    margin-left: 1rem;
+}
+
+.footer__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.footer__socials a {
+    margin-left: 0.5rem;
+}
+
+
+.footer__etemad {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+
+/**
+* Snapp Slider
+*/
+
+.snapp-slider-section {
+    margin: 5rem 0;
+}
+
+.snapp-slider-wrapper {
+    padding: 0 7rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+#snapp_slider {
+    border-radius: 1rem;
+}
+
+#snapp_slider .keen-slider__slide {
+    height: 25rem;
+    width: 100%;
+}
+
+#snapp_slider .keen-slider__slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.keen-dots-wrapper {
+    position: absolute;
+    z-index: 100;
+    bottom : 1rem;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    direction: ltr;
+}
+
+.keen-dots-wrapper .keen-dots {
+    background-color: rgba(255,255,255,.15);
+    display: flex;
+    padding: 0.3rem;
+    border-radius: .5rem;
+}
+
+.keen-dots-wrapper .keen-dots .dot {
+    padding: .3rem;
+    border: none;
+    outline: none;
+    margin: 0 .2rem;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, .3);
+    cursor: pointer;
+}
+
+.keen-dots-wrapper .keen-dots .dot.active {
+    background-color: white;
+}
